@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 
-class Rectangle():
+""" Defines a Rectangle class """
+
+class Rectangle:
+    """ Rep a rect """
     pass
