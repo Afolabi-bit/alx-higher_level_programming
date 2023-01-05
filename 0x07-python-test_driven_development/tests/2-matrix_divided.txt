@@ -66,3 +66,9 @@ Check when div=float(inf)
 	>>> matrix = [[1, 2, 3], [4, 5, 6]]
 	>>> matrix_divided(matrix, float('inf'))
 	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Check for when div is a string
+	>>> matrix = [[1, 2, 3]. [4, 5, 6]]
+	>>> matrix_divided(matrix, 'div')
+	Traceback: (most recent call last)
+	TypeError: div must be a number
