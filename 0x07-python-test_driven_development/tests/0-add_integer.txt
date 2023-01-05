@@ -32,3 +32,7 @@ Check for more than 2 args
 	>>> add_integer(1, 2, 3)
 	Traceback (most recent call last):
 	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Check for one float and one int
+	>>> add_integer(4.2, 2)
+	6
