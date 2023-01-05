@@ -36,3 +36,13 @@ Check for more than 2 args
 Check for one float and one int
 	>>> add_integer(4.2, 2)
 	6
+
+Check for float inf
+	>>> add_integer(1, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+Check for passed NaN
+	>>> add_integer(1, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
