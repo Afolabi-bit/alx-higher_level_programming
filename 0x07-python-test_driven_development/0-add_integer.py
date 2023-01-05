@@ -4,6 +4,7 @@ This module adds two integer/float values
 It return an integer value for the sum
 """
 
+
 def add_integer(a, b=98):
     """a: int/float value
        b: int/float optional value
