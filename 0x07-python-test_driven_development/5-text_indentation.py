@@ -7,7 +7,7 @@ after certain characters
 
 def text_indentation(text):
     """
-	    text: expected string input
+        text: expected string input
     """
 
     if type(text) is not str:

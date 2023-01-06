@@ -26,3 +26,6 @@ Check for no arg
 	>>> text_indentation()
 	Traceback (most recent call last):
 	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Check for string with blank line
+	>>> text_indentation("")
