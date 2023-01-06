@@ -1,0 +1,28 @@
+The ``Text_indentation`` module that indents a string
+=====================================================
+
+Using ``text_indentation``
+--------------------------
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Check for "Holberton School"
+	>>> text_indentation("Holberton School")
+	Holberton School
+
+Check for "Hoberton.School"
+	>>> text_indentation("Holberton.School")
+	Holberton.
+	<BLANKLINE>
+	School
+
+Check for a different data type
+	>>> text_indentation(12)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+	
+
+Check for no arg
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
