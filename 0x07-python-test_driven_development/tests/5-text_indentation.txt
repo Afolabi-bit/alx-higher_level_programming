@@ -29,3 +29,13 @@ Check for no arg
 
 Check for string with blank line
 	>>> text_indentation("")
+
+Check for string="Holberton. School? How are you: John”
+	>>> text_indentation("Holberton. School? How are you: John")
+	Holberton.
+	<BLANKLINE>
+	 School?
+	<BLANKLINE>
+	 How are you:
+	<BLANKLINE>
+	 John
