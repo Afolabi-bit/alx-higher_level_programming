@@ -1,0 +1,33 @@
+This is a doctest for the ``1-my_list`` module
+==============================================
+Using ``MyList``
+----------------
+
+Importing func from module:
+	>>> MyList = __import__('1-my_list').MyList
+
+Check if MyList is a subclass of list:
+	>>> issubclass(MyList, list)
+	True
+
+Check if MyList sorts empty list:
+	>>> ml = MyList().print_sorted()
+	[]
+
+Check if append works:
+	>>> ml = MyList()
+	>>> ml.append(1)
+	>>> ml.append(4)
+	>>> ml.append(2)
+	>>> ml.append(3)
+	>>> ml.append(5)
+	>>> ml.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> print(ml)
+	[1, 4, 2, 3, 5]
+
+Check for excess arguments:
+	>>> ml = MyList()
+	>>> ml.print_sorted(12)
+	Traceback (most recent call last):
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
