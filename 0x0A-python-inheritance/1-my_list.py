@@ -9,8 +9,10 @@ class MyList(list):
     """
         A subclass of list
     """
+
     def __init__(self):
         super().__init__()
+
     def print_sorted(self):
         sort = sorted(self)
         print(sort)

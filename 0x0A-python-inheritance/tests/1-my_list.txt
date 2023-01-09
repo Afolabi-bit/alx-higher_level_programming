@@ -6,6 +6,16 @@ Using ``MyList``
 Importing func from module:
 	>>> MyList = __import__('1-my_list').MyList
 
+Checking for module docstring:
+	>>> m = __import__("1-my_list").__doc__
+	>>> len(m) > 1
+	True
+
+Checking for class docstring:
+	>>> c = __import__("1-my_list").MyList.__doc__
+	>>> len(c) > 1
+	True
+
 Check if MyList is a subclass of list:
 	>>> issubclass(MyList, list)
 	True
