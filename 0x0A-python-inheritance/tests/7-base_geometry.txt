@@ -1,0 +1,46 @@
+This is the doctest for ``BaseGeometry``
+========================================
+Using ``BaseGeometry``
+----------------------
+
+Importing module:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking for module docstring:
+	>>> m = __import__("7-base_geometry").__doc__
+	>>> len(m) > 1
+	True
+
+Checking for class docsting:
+	>>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+	>>> len(c) > 1
+	True
+
+Checking for corrext input types:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my int", 12)
+
+Checking for TypeError: name must be an integer:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my int", "why")
+	Traceback (most recent call last):
+	TypeError: my int must be an integer
+
+Checking for ValueError: ... greater than 0
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	ValueError: age must be greater than 0
+
+Cgecking for one arg:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+Checking for no arg:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
