@@ -34,8 +34,8 @@ Check for string="Holberton. School? How are you: John”
 	>>> text_indentation("Holberton. School? How are you: John")
 	Holberton.
 	<BLANKLINE>
-	 School?
+	School?
 	<BLANKLINE>
-	 How are you:
+	How are you:
 	<BLANKLINE>
-	 John
+	John
