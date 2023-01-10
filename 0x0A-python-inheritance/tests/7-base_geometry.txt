@@ -62,3 +62,33 @@ Checking for integer < 0:
 	>>> bg.integer_validator("age", -4)
 	Traceback (most recent call last):
 	ValueError: age must be greater than 0
+
+Check for boolean input:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", True)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+Check for None:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+Check for a dict as input:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", {3, 4})
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+Check for a list as input:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", {3, 4})
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+Check for a tuple as argument:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", (4,))
+	Traceback (most recent call last):
+	TypeError: age must be an integer
