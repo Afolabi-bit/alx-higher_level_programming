@@ -83,7 +83,7 @@ Check for a dict as input:
 
 Check for a list as input:
 	>>> bg = BaseGeometry()
-	>>> bg.integer_validator("age", {3, 4})
+	>>> bg.integer_validator("age", [3])
 	Traceback (most recent call last):
 	TypeError: age must be an integer
 
