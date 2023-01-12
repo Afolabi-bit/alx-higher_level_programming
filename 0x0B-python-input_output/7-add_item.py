@@ -8,13 +8,13 @@ if __name__ == "__main__":
         __import__('6-load_from_json_file').load_from_json_file
 
 
-filename = "add_item.json"
-num = len(sys.argv)
-try:
-    arg_list = load_from_json_file(filename)
-except FileNotFoundError:
-    arg_list = []
+    filename = "add_item.json"
+    num = len(sys.argv)
+    try:
+        arg_list = load_from_json_file(filename)
+    except FileNotFoundError:
+        arg_list = []
 
-arg_list.append(sys.argv[i:])
+    arg_list.append(sys.argv[i:])
 
-save_to_json_file(arg_list, filename)
+    save_to_json_file(arg_list, filename)
