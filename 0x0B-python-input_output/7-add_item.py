@@ -13,7 +13,7 @@ if __name__ == "__main__":
         arg_list = load_from_json_file(filename)
     except FileNotFoundError:
         arg_list = []
-
-    arg_list.append(sys.argv[1:])
+    for i in range(1, num):
+        arg_list.append(sys.argv[i])
 
     save_to_json_file(arg_list, filename)
