@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines functions that
-loads from JSON,
-saves to JSON, and
-adds all arguments
+This module defines functions that loads from JSON,
+saves to JSON, and adds all arguments
 """
 import sys
 
