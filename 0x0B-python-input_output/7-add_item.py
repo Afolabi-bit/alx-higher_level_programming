@@ -14,6 +14,6 @@ if __name__ == "__main__":
     except FileNotFoundError:
         arg_list = []
 
-    arg_list.append(sys.argv[i:])
+    arg_list.append(sys.argv[1:])
 
     save_to_json_file(arg_list, filename)
