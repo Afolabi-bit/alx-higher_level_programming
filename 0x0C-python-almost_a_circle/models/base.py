@@ -33,7 +33,7 @@ class Base():
         """
             Saves obj as json
         """
-        filename = "{}.json".format(cls)
+        filename = "{}.json".format(cls.__name__)
         obj_list = []
 
         if list_objs is None:
