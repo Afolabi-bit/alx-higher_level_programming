@@ -44,7 +44,7 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self):
+    def x(self, x):
         """ x setter """
         self.__x = x
 
@@ -54,6 +54,6 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self):
+    def y(self, y):
         """ y setter """
         self.__y = y
