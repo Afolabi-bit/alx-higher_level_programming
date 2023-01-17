@@ -91,7 +91,7 @@ class Rectangle(Base):
         return f'[Rectangle] ({self.id}) {self.__x}/{self.__y}'\
             f' - {self.__width}/{self.__height}'
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ takes variable number of no
             keyword arguments
         """
@@ -99,3 +99,6 @@ class Rectangle(Base):
             attribute_list = ["id", "width", "height", "x", "y"]
             for i in range(len(args)):
                 setattr(self, attribute_list[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
