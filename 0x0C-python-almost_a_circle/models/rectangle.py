@@ -112,4 +112,4 @@ class Rectangle(Base):
         for i in attributes:
             dict_attributes[i] = getattr(self, i)
 
-        return dict_attributes 
+        return dict_attributes
