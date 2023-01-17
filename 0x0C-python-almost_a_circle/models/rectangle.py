@@ -35,11 +35,11 @@ class Rectangle(Base):
         self.height = h
 
     @property
-    def x(self):
+    def eks(self):
         return self.__x
 
-    @x.setter
-    def x(self, x):
+    @eks.setter
+    def eks(self, x):
         self.__x = x
 
     @property
