@@ -82,3 +82,8 @@ class Rectangle(Base):
         """Uses hashes to create rectangles"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """string representation of class"""
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y}'\
+            f'- {self.__width}/{self.__height}'
