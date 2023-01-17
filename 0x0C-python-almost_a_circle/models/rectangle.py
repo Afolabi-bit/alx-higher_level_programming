@@ -90,3 +90,12 @@ class Rectangle(Base):
         """string representation of class"""
         return f'[Rectangle] ({self.id}) {self.__x}/{self.__y}'\
             f' - {self.__width}/{self.__height}'
+
+    def update(self, *args):
+        """ takes variable number of no
+            keyword arguments
+        """
+        if args is not None and len(args) > 0:
+            attribute_list = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attribute_list[i], args[i])
