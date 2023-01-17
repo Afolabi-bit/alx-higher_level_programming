@@ -80,7 +80,10 @@ class Rectangle(Base):
 
     def display(self):
         """Uses hashes to create rectangles"""
+        for i in range(self.__x):
+            print()
         for i in range(self.__height):
+            print(" " * self.__y, end="")
             print("#" * self.__width)
 
     def __str__(self):
