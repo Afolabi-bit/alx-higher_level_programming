@@ -69,6 +69,7 @@ class Base():
             new = cls(10)
         new.update(**dictionary)
         return new
+
     @classmethod
     def load_from_file(cls):
         """ Returns a list of instances """
