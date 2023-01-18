@@ -4,6 +4,7 @@ This module defines the base class for all other
 classes in this package
 """
 import json
+import os
 
 
 class Base():
