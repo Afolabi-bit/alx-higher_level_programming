@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const args = process.argv.slice(2);
-const ints = args.map(x => parseInt(x)).filter(num => Number.isInteger(num));
+const ints = args.map(Number).filter(num => Number.isInteger(num));
 
 if (ints.length < 1) {
   console.log(0);
