@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const args = process.argv.slice(2);
+const args = process.argv.slice(2, process.argv.length);
 const ints = args.map(Number).filter(num => Number.isInteger(num));
 
 if (ints.length < 1) {
