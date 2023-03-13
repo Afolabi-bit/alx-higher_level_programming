@@ -1,13 +1,10 @@
 #!/usr/bin/node
-
-const args = process.argv.slice(2, process.argv.length);
-const ints = args.map(Number).filter(num => Number.isInteger(num));
-
-if (ints.length < 1) {
+if (process.argv.length <= 3) {
   console.log(0);
-} else if (ints.length < 2) {
-  console.log(1);
 } else {
-  const secondLargest = ints.sort((a, b) => b - a)[1];
-  console.log(secondLargest);
+  const args = process.argv
+    .map(Number)
+    .slice(2, process.argv.length)
+    .sort((a, b) => a - b);
+  console.log(args[args.length - 2]);
 }
