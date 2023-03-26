@@ -7,7 +7,7 @@ hbtn_0e_0_usa
 import MySQLdb
 from sys import argv
 
-if __name__ == "__main":
+if __name__ == "__main__":
     """
         Access db and print states
     """
@@ -19,3 +19,4 @@ if __name__ == "__main":
     states = cursor.fetchall()
     for state in states:
         print(state)
+
