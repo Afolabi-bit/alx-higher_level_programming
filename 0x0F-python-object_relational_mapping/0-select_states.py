@@ -6,6 +6,9 @@ import MySQLdb
 import sys
 
 if __name__ == "__main":
+    """
+        Access db and print states
+    """
     args = sys.argv[1:]
     db = MySQLdb.connect(
         host="localhost", user=args[0], port=3306, passwd=args[1], db=args[2])
