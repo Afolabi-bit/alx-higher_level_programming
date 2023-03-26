@@ -17,9 +17,13 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3])
 
     engine = create_engine(db_url)
+
+    Base.metadata.create_all(engine)
+
     Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    for instance in session.query(State).order_by(State.id):
-        print('{0}: {1}'.format(instance.id, instance.name))
+    for instance in session.query(State).order_by(State.id).all():
+        print('{}: {}'.format(instance.id, instance.name))
+    session.close()
