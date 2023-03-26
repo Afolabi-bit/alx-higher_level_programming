@@ -5,15 +5,14 @@ hbtn_0e_0_usa
 """
 
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main":
     """
         Access db and print states
     """
-    args = sys.argv[1:]
     db = MySQLdb.connect(
-        host="localhost", user=args[0], port=3306, passwd=args[1], db=args[2])
+        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
     cursor = db.cursor()
 
     cursor.execute("SELECT * FROM states")
