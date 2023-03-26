@@ -20,7 +20,6 @@ if __name__ == "__main__":
                     ON c.state_id = s.id\
                     WHERE s.name = %s", (sys.argv[4],))
     cities = cursor.fetchall()
-    for c in cities:
-        print(c)
+    print(", ".join([city[1] for city in cities])
     cursor.close()
     db.close()
