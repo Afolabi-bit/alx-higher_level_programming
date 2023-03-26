@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cursor.execute("SELECT c.id, c.name, s.name FROM cities as c\
                     inner join states as s\
-                    ON c.states_id = s.id")
+                    ON c.state_id = s.id")
     cities = cursor.fetchall()
     for c in cities:
         print(c)
